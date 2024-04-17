@@ -91,9 +91,7 @@ sap.ui.define([
 
               //console.log(this.getBaseURL());
               this.setFeedInputDisabled()
-              // this.byId('FeedInput').setEnabled(false);
-              // this.byId('ProjectElementItem').setEnabled(false);
-
+          
             
               this._employeeID = await this.getUserInfo();
               this.getOwnerComponent().getRouter().getRoute("conversation").attachPatternMatched(this._onRouteMatched, this);

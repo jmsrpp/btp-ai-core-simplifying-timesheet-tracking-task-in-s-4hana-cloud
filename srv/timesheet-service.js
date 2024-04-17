@@ -2,7 +2,7 @@ const cds = require('@sap/cds');
 const { INSERT, SELECT, UPDATE } = cds.ql;
 const { v4: uuidv4 } = require('uuid');
 const { insertMessage } = require('./memory-helper');
-var WBSmapping = {};
+//var WBSmapping = {};
 
 
 module.exports = async function (){
@@ -123,7 +123,7 @@ module.exports = async function (){
             for await (const referencedObjectUUID of referencedObjectUUIDArray) {
                 var projectElement = await ProjectElementApi.tx(req).get(`/A_EnterpriseProjectElement(guid'${referencedObjectUUID}')`)
                 .then(response => {
-                    WBSmapping[response.ProjectElement] = response.ProjectElementDescription;
+                    //WBSmapping[response.ProjectElement] = response.ProjectElementDescription;
 
                     return response;
                 })

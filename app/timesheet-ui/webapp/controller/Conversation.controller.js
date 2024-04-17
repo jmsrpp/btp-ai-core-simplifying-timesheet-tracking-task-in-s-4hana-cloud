@@ -326,10 +326,11 @@ sap.ui.define([
               var oContexts = await this.getOwnerComponent().getModel("localmodel").bindList("/Conversation").requestContexts();
 
               for await (const oContext of oContexts) {
-                var oUserID = await oContext.requestObject('userID');
-                if(oUserID !== 'I561660'){
-                  await oContext.delete();
-                }
+                // var oUserID = await oContext.requestObject('userID');
+                await oContext.delete();
+                // if(oUserID !== 'I561660'){
+                  
+                // }
               };
               this.loadConversationData();
             },
