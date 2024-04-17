@@ -1,0 +1,5 @@
+cID_cID,mID,role,content,creation_time
+"f47ac10b-58cc-4372-a567-0e02b2c3d479","3a7b82d6-9395-4b39-92ba-fdbbc9c17f8e","user","what is SAP HANA Cloud?","2024-02-01 14:52:23.123"
+"f47ac10b-58cc-4372-a567-0e02b2c3d479","d621b61c-94c4-4b27-89de-7ad6ff5e1673","assistant","SAP HANA Cloud provides a single place to access, store, and process all enterprise data in real time. It is a cloud-native platform that reduces the complexity of multi-cloud or hybrid system landscapes.","2024-02-01 14:53:23.123"
+"1e6e5b54-6806-4e6f-af3e-25b5b76c5e56","9f874d11-d35a-4f59-8a8c-03c8d632a2a7","user","what is SAP Event Mesh ?","2024-02-02 14:52:23.123"
+"1e6e5b54-6806-4e6f-af3e-25b5b76c5e56","c3f7b13f-9dd8-4bb0-b66c-92b8b9d32e8d","assistant","SAP Event Mesh allows applications to communicate through asynchronous events.","2024-02-02 14:54:23.123"

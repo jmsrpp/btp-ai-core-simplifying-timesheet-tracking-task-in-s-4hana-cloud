@@ -1,0 +1,21 @@
+/* Enter your custom styles here */
+.timeSheetApp .chatBubble[data-userBubble] { /* ... */
+    margin-right: 1rem !important;
+    margin-left: auto !important;
+}
+ 
+.chatBubble{
+    width: fit-content;
+}
+ 
+.userBubbleItem{
+    flex-direction: row-reverse;
+    display: flex;
+}
+.projectList{
+    display: inline-block;
+    border: 0;
+    background-color: transparent;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,13 @@
+<mvc:View controllerName="timesheetui.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:f="sap.f"
+    xmlns="sap.m">
+    <!-- <SplitApp id="app" mode="ShowHideMode">
+	  </SplitApp> -->
+    <App id="app" class="timeSheetApp">
+        <f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid" layout="TwoColumnsMidExpanded">
+        </f:FlexibleColumnLayout>
+    </App>
+
+</mvc:View>

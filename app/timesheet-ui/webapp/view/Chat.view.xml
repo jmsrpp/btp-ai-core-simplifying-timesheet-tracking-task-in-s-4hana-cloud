@@ -1,0 +1,67 @@
+<mvc:View controllerName="timesheetui.controller.Chat"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <!-- <OverflowToolbarButton id="itemDeleteButton" icon="sap-icon://delete" text="Delete" type="Transparent" press=".onOpenDialog"/> -->
+
+    <Page id="Chat" title="Chat" navButtonPress="onNavBack" showNavButton="true">
+        <headerContent>            
+            <Button id="s4button" text="Timesheet App" press="openS4" />
+        </headerContent>
+        <content >
+            <List
+            
+                id = "FeedList"
+                showSeparators="Inner"
+                enableBusyIndicator = "true"
+                noDataText="No message history available"
+                items="{chatHistory>/ChatCollection}" >
+                <FeedListItem
+                    id='FeedListItem'
+                    class="chatBubble sapUiSmallMargin"
+                    sender="{path: 'chatHistory>role'}"
+                    icon=""
+                    senderPress="onSenderPress"
+                    iconPress="onIconPress"
+                    info=""
+                    timestamp="{path:'chatHistory>creation_time', formatter:'.timeFormatter'}"
+                    text="{chatHistory>content}"
+                    convertLinksToAnchorTags="All">
+                    <customData>
+                        <core:CustomData
+                            id ='CustomData'
+                            key="userBubble"
+                            value=""
+                            writeToDom="{= ${chatHistory>role} === 'User' ? true : false }"
+                        />
+                    </customData>
+                </FeedListItem>
+            
+            </List>
+            <VBox id="ProjectElementListBox" justifyContent="Center" alignItems="Center">
+                <Label id="Label1" text="Book Time For Project"/>
+                <List
+                    id="ProjectElementList"
+                    items="{
+                        path: 'projectElement>/ProjectElementCollection'
+                    }">
+
+                    <CustomListItem id="CustomListItem">
+                        <Button id="ProjectElementItem" text="{projectElement>ProjectElement}" press="onProjectElementButtonPress" />
+                    </CustomListItem>
+
+                </List>
+            </VBox>
+            <HBox id="BusyIndicatorBox" justifyContent="Center" alignItems="Center">
+                <BusyIndicator id="BusyIndicator" text="Waiting for Response..." class="sapUiTinyMargin" />
+		    </HBox>
+            <FeedInput
+                id = 'FeedInput'
+                post="onPost"
+                placeholder="Book Time Record Here."
+                icon="test-resources/sap/m/images/dronning_victoria.jpg"
+                class="sapUiMediumMarginTopBottom" />
+        </content>
+    </Page>
+</mvc:View>
