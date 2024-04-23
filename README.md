@@ -6,10 +6,10 @@ Use Generative AI to simplify timesheet tracking task in S/4HANA Cloud
 
 
 ## Description
-This is the code repo for SAP Discovery Center mission.
+This is the code repo for SAP Discovery Center mission(coming soon).
 
 ## Requirements
-Please follow instructions in the DC mission.
+SAP BTP,SAP Business Application Studio, SAP S/4HANA Cloud, SAP AI Core
 
 ## Download and Installation
 
