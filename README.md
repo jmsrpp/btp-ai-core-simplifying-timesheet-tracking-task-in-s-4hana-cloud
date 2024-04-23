@@ -2,9 +2,8 @@
 # Title
 Use Generative AI to simplify timesheet tracking task in S/4HANA Cloud
 
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-ai-core-simplifying-timesheet-tracking-task-in-s-4hana-cloud)](https://api.reuse.software/info/github.com/SAP-samples/btp-ai-core-simplifying-timesheet-tracking-task-in-s-4hana-cloud)
--->
+
 
 ## Description
 This is the code repo for SAP Discovery Center mission.
