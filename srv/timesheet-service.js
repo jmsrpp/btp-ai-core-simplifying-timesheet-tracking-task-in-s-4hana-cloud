@@ -12,7 +12,7 @@ module.exports = async function (){
         try {
             const { EmployeeID, StartDate, EndDate } = req.data;
             const TimesheetApi = await cds.connect.to("S4Timesheet_Destination");
-            const getTimeRecordResponse = await TimesheetApi.tx(req).get(`/TimeSheetEntryCollection?$filter=TimeSheetDate ge datetime'${StartDate}' and TimeSheetDate le datetime'${EndDate}' and PersonWorkAgreement eq '${EmployeeID}'`)
+            const getTimeRecordResponse = await TimesheetApi.get(`/TimeSheetEntryCollection?$filter=TimeSheetDate ge datetime'${StartDate}' and TimeSheetDate le datetime'${EndDate}' and PersonWorkAgreement eq '${EmployeeID}'`)
             .then(response => {
                 //console.log(response)
 
@@ -121,7 +121,7 @@ module.exports = async function (){
             var ProjectElementResponse = [];
 
             for await (const referencedObjectUUID of referencedObjectUUIDArray) {
-                var projectElement = await ProjectElementApi.tx(req).get(`/A_EnterpriseProjectElement(guid'${referencedObjectUUID}')`)
+                var projectElement = await ProjectElementApi.get(`/A_EnterpriseProjectElement(guid'${referencedObjectUUID}')`)
                 .then(response => {
                     //WBSmapping[response.ProjectElement] = response.ProjectElementDescription;
 
@@ -154,7 +154,7 @@ module.exports = async function (){
         try {
             const { EmployeeEmail } = req.data;
             const UserApi = await cds.connect.to("S4Timesheet-User-Destination");
-            const getUserResponse = await UserApi.tx(req).get(`/YY1_I_PersonWorkAgreement?$filter=DefaultEmailAddress eq '${EmployeeEmail}'`)
+            const getUserResponse = await UserApi.get(`/YY1_I_PersonWorkAgreement?$filter=DefaultEmailAddress eq '${EmployeeEmail}'`)
             .then(response => {
                 //console.log(response)
 

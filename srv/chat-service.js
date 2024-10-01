@@ -12,10 +12,10 @@ module.exports = function () {
         const { conversationId, messageId, message_time, user_id, user_query,company_code, activity_type } = req.data;
         const { Conversation, Message } = this.entities;
 
-        const systemPrompt = `You are an assistant that creates the body for OData V4 POST messages and parameters from plain English. 
-                        If assistant have all information to answer, it is super important that assistant does not provide any explanation and the response should be an OData V4 raw body in JSON like example between {}. 
-                        If assistant need more information to fill all mandatory fields, ask user to provide supplemental information.
-                        Assitant needs to generate the payload based on instructions between<>.
+        const systemPrompt = `You are an assistant that creates the body for OData V2 POST messages and parameters from plain English. 
+                        If assistant has all information needed to answer, it is super important that assistant does not provide any explanation and the response should be an OData V2 raw body in JSON like example between {}. 
+                        If assistant needs more information to fill all mandatory fields, ask user to provide supplemental information.
+                        Assistant needs to generate the payload based on instructions between<>.
                         {
                         "TimeSheetDataFields": {
                             "ActivityType": "",
