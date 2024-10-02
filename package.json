@@ -6,9 +6,11 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@cap-js/hana": "^1.3",
     "@sap-cloud-sdk/http-client": "^3.12.0",
+    "@sap-cloud-sdk/odata-v2": "^3.21.0",
     "@sap/approuter": "^16.2.0",
-    "@sap/cds": "^7.1",
+    "@sap/cds": "^8.2",
     "@sap/cds-compiler": "^4.6.2",
     "@sap/cds-hana": "^2.0.0",
     "@sap/hdi-deploy": "^5.0.1",
@@ -19,12 +21,11 @@
     "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "passport": "^0.7.0",
-    "uuid": "^9.0.1",
-    "@cap-js/hana": "^1"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/cds-dk": "^7.1",
+    "@sap/cds-dk": "^8.2",
     "@sap/ux-specification": "^1.120.4",
     "cds-swagger-ui-express": "^0.8.0",
     "rimraf": "^3.0.2"
@@ -43,25 +44,7 @@
         "csrf": true,
         "credentials": {
           "destination": "S4Timesheet-Destination",
-          "path": "/sap/opu/odata/sap/API_MANAGE_WORKFORCE_TIMESHEET",
-          "requestTimeout": 30000
-        }
-      },
-      "S4Timesheet_ProjectAssignment_Destination": {
-        "kind": "odata-v2",
-        "csrf": true,
-        "credentials": {
-          "destination": "S4Timesheet-Destination",
-          "path": "/sap/opu/odata/sap/API_PROJECTDEMAND",
-          "requestTimeout": 30000
-        }
-      },
-      "S4Timesheet-ProjectElement-Destination": {
-        "kind": "odata-v2",
-        "csrf": true,
-        "credentials": {
-          "destination": "S4Timesheet-Destination",
-          "path": "/sap/opu/odata/sap/API_ENTERPRISE_PROJECT_SRV",
+          "path": "/sap/opu/odata/sap",
           "requestTimeout": 30000
         }
       },

@@ -1,27 +1,32 @@
 {
-    "cdsc": {
-        "beta": {
-            "vectorType": true
-        }
-    },
-    "requires":{
-        "GENERATIVE_AI_HUB": {
-            "CHAT_MODEL_DESTINATION_NAME": "AICoreAzureOpenAIDestination",
-            "CHAT_MODEL_DEPLOYMENT_URL": "/v2/inference/deployments/d31d046b4792cb52",
-            "CHAT_MODEL_RESOURCE_GROUP": "default",
-            "CHAT_MODEL_API_VERSION": "2023-03-15-preview",
-            "EMBEDDING_MODEL_DESTINATION_NAME": "AICoreAzureOpenAIDestination",
-            "EMBEDDING_MODEL_DEPLOYMENT_URL": "/v2/inference/deployments/d71748a7711a7bb0",
-            "EMBEDDING_MODEL_RESOURCE_GROUP": "default",
-            "EMBEDDING_MODEL_API_VERSION": "2023-05-15"
-        },
-        "AICoreAzureOpenAIDestination": {
-            "kind": "rest",
-            "credentials": {
-              "destination": "openai-aicore-api",
-              "requestTimeout": "300000"
-            }
-        }
+  "cdsc": {
+    "beta": {
+      "vectorType": true
     }
-
+  },
+  "requires": {
+    "gen-ai-hub": {
+      "gpt-4": {
+        "destinationName": "AICoreAzureOpenAIDestination",
+        "deploymentUrl": "/v2/inference/deployments/d31d046b4792cb52",
+        "resourceGroup": "default",
+        "apiVersion": "2023-03-15-preview",
+        "modelName": "gpt-4"
+      },
+      "gpt-4o": {
+        "destinationName": "AICoreAzureOpenAIDestination",
+        "deploymentUrl": "/v2/inference/deployments/d42ed73b0a6a6e94",
+        "resourceGroup": "default",
+        "apiVersion": "2024-08-01-preview",
+        "modelName": "gpt-4o"
+      }
+    },
+    "AICoreAzureOpenAIDestination": {
+      "kind": "rest",
+      "credentials": {
+        "destination": "openai-aicore-api",
+        "requestTimeout": "300000"
+      }
+    }
+  }
 }
