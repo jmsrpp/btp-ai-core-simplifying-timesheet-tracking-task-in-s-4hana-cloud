@@ -132,6 +132,7 @@ this.on("createTimeRecord", async (req, next) => {
           );
         }
         createTimesheetResponse = responseBodies[0];
+        console.log("Create Timesheet Response: ", createTimesheetResponse);
         await handleSuccessResponse(
           createTimesheetResponse,
           conversationId,
@@ -151,6 +152,7 @@ this.on("createTimeRecord", async (req, next) => {
           .execute({
             destinationName: "S4Timesheet-Destination",
           });
+        console.log("Create Timesheet Response: ", createTimesheetResponse);  
         await handleSuccessResponse(
           createTimesheetResponse,
           conversationId,
