@@ -253,12 +253,13 @@ sap.ui.define([
                     },
                   });
 
-                  //console.log("Get Chat Response Success!",chatResponse);
+                  console.log("Get Chat Response Success!",chatResponse.content);
 
                   try {
                     JSON.parse(chatResponse.content);
+                    console.log("in Try");
                   } catch (error) {
-                    //console.log("in Catch");
+                    console.log("in Catch: ", error.message);
                     oEntryBot = {
                       cID_cID:chatResponse.cID_cID,
                       mID:chatResponse.mID,
